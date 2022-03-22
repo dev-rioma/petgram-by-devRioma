@@ -1,0 +1,44 @@
+{
+  "name": "curso-platzi-react-avanzado",
+  "version": "1.0.0",
+  "description": "**¡Sígueme en Youtube para más contenido de React y Javascript!** 👉 https://www.youtube.com/midudev",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-rioma/petgram-by-devRioma.git"
+  },
+  "keywords": [
+    "react",
+    "javaScript",
+    "Versel",
+    "Babel",
+    "eslint",
+    "prettier",
+    "webpack"
+  ],
+  "author": "devRioma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev-rioma/petgram-by-devRioma/issues"
+  },
+  "homepage": "https://github.com/dev-rioma/petgram-by-devRioma#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
