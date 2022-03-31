@@ -3,7 +3,7 @@
   "name": "petgram-devrioma",
   "builds": [
       {
-          "use": "@versel/static-build",
+          "use": "@vercel/static-build",
           "src": "package.json"
       }
   ],
