@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 // archivo provicional de hook
-const useScroll = () => {
+const useChangeScroll = () => {
   const [showFixed, setShowFixed] = useState(false)
 
   useEffect(function () {
@@ -10,7 +10,8 @@ const useScroll = () => {
     }
 
     document.addEventListener('scroll', onScroll)
-  })
+    return () => document.removeEventListener('scroll', onScroll)
+  }, [showFixed])
 }
 
-export default useScroll
+export default useChangeScroll

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { scale } from '../styles/animation'
 
 export const List = styled.ul`
@@ -7,7 +7,8 @@ export const List = styled.ul`
   overflow-x: hidden;
   overflow-y: hidden;
   width: 100%;
-  &.fixed {
+  ${props => props.fixed && css`
+  {
     background: #fff;
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -22,6 +23,7 @@ export const List = styled.ul`
     ${scale({ time: '0.5s' })}
     z-index: 1;
   }
+  `}
 `
 
 export const Item = styled.li`

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Fragment } from 'react/cjs/react.production.min'
 import useGetCategories from '../../hooks/useGetCategories'
 import { Category } from '../Category'
@@ -8,7 +8,8 @@ import { List, Item } from './styles'
 const API = 'https://petgram-by-devrioma-r93n54cnu-dev-rioma.vercel.app/categories'
 
 export const ListOfCategories = () => {
-  const categories = useGetCategories(API)
+  const { categories, loading } = useGetCategories(API)
+  // const { show } = useChangeScroll()
   const [showFixed, setShowFixed] = useState(false)
 
   useEffect(function () {
@@ -22,12 +23,15 @@ export const ListOfCategories = () => {
   }, [showFixed])
 
   const renderList = (fixed) => (
-    <List className={fixed ? 'fixed' : ''}>
+    <List fixed={fixed}>
       {
-        categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+        loading
+          ? <Item key='Loading'><Category /></Item>
+          : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
       }
     </List>
   )
+
   return (
     <Fragment>
       {renderList()}
