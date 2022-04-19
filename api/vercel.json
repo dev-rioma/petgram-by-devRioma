@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "petgram-server-devRioma",
+  "name": "petgram-backend-devRioma",
   "alias": ["petgram-api-by-devRioma"],
   "builds": [{ "src": "index.js", "use": "@vercel/node" }],
   "routes": [{

@@ -5,7 +5,7 @@ import { Category } from '../Category'
 
 import { List, Item } from './styles'
 
-const API = 'https://petgram-by-devrioma-r93n54cnu-dev-rioma.vercel.app/categories'
+const API = 'https://petgram-by-devrioma-e63s5rlxw-dev-rioma.vercel.app/categories'
 
 export const ListOfCategories = () => {
   const { categories, loading } = useGetCategories(API)
