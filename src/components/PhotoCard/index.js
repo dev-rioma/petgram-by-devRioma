@@ -1,6 +1,6 @@
 import React from 'react'
 import { Article, ImgWrapper, Img } from './styles'
-
+import { Link } from 'react-router-dom'
 import { Fragment } from 'react/cjs/react.production.min'
 import { useLocalSorage } from '../../hooks/useLocalStorage'
 import { useNearScreen } from '../../hooks/useNearScreen'
@@ -26,11 +26,11 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
       {
         show && (
           <Fragment>
-            <a href={`/?detail=${id}`}>
+            <Link to={`/detail/${id}`}>
               <ImgWrapper>
                 <Img src={src} />
               </ImgWrapper>
-            </a>
+            </Link>
             <FavButton liked={liked} likes={likes} onClick={handleFavClick} />
           </Fragment>
         )
